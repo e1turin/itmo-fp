@@ -1,0 +1,15 @@
+# Reuse image from another Dockerfile
+# docker build -t idris2-pack-lsp -f Dockerfile.idris2-pack-lsp .
+FROM idris2-pack-lsp
+
+RUN apt-get update && apt-get install -y \
+      curl \
+      tmux
+  
+ADD https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz /root/
+RUN rm -rf /opt/nvim \
+    tar -C /opt -xzf /root/nvim-linux64.tar.gz \
+    echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> /root/.bashrc
+
+ADD https://github.com/e1turin/neovim-config.git /root/.config/nvim/lua
+RUN mkdir -p /root/.config/nvim && echo 'require("setup")' > /root/.config/nvim/init.lua

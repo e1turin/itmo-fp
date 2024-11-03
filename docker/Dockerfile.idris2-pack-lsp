@@ -1,0 +1,4 @@
+FROM ghcr.io/stefan-hoeck/idris2-pack:latest
+
+RUN pack install-app idris2-lsp
+

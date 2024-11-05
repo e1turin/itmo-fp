@@ -1,6 +1,6 @@
 # Reuse image from another Dockerfile
 # docker build -t idris2-pack-lsp -f Dockerfile.idris2-pack-lsp .
-FROM idris2-pack-lsp
+FROM e1turin/idris2-pack-lsp
 
 RUN apt-get update && apt-get install -y \
       curl \

@@ -1,25 +1,33 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
-	"name": "Idris2 Dev Env",
+    "name": "Idris2 Dev Env",
+    "image": "e1turing/idris2-pack-lsp", // use prebuild image or specify Dockerfile:
 
-	"image": "e1turing/idris2-pack-lsp" // use prebuild image or specify Dockerfile:
-	// "build": {
-	// 		"dockerfile": "../docker/Dockerfile.idris2-pack-lsp"
-	// }
+    // "build": {
+    // 		"dockerfile": "../docker/Dockerfile.idris2-pack-lsp"
+    // },
 
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
+    // Features to add to the dev container. More info: https://containers.dev/features.
+    // "features": {},
 
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    // "forwardPorts": [],
 
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "uname -a",
+    // Use 'postCreateCommand' to run commands after the container is created.
+    // "postCreateCommand": "uname -a",
 
-	// Configure tool-specific properties.
-	// "customizations": {},
+    // Configure tool-specific properties.
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "bamboo.idris2-lsp",            // recommended by community LSP extension
+                "tamasfe.even-better-toml",     // most popular TOML support extension
+                "ms-azuretools.vscode-docker",  // Dockerfile support extension for quick image fix  
+            ]
+        }
+    },
 
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+    // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+    // "remoteUser": "root"
 }

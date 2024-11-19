@@ -1,14 +1,15 @@
 FROM ghcr.io/stefan-hoeck/idris2-pack:latest
 
 # setup command line completion
-RUN eval "$(idris2 --bash-completion-script idris2)"; \
-    eval "$(pack completion-script pack)"
+# FIXME: somehow it doesn't work
+RUN eval "$(idris2 --bash-completion-script idris2)" \
+    && eval "$(pack completion-script pack)"
 
 # setup REPL completion
 RUN apt update && apt install -y rlwrap \
-        && echo 'alias idris2="rlwrap idris2"' >> ~/.bashrc \
-        && echo 'alias pack="rlwrap pack --rlwrap"' >> ~/.bashrc
+        && echo 'alias idris2="rlwrap idris2"' >> ~/.bash_aliases \
+        && echo 'alias pack="rlwrap pack --rlwrap"' >> ~/.bash_aliases
 
 RUN pack install-app idris2-lsp
-#HEALTHCHECK TODO
+#HEALTHCHECK LSP TODO
 

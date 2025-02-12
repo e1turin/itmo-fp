@@ -1,3 +1,6 @@
 [submodule "lab-1-project-euler"]
 	path = lab-1-project-euler
 	url = https://github.com/e1turin/itmo-fp-lab-1-project-euler.git
+[submodule "lab-2-data-structures"]
+	path = lab-2-data-structures
+	url = https://github.com/e1turin/itmo-fp-data-structures.git

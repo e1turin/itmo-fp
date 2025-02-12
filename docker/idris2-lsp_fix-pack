@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Code from an issue https://github.com/stefan-hoeck/idris2-pack/issues/292
+
+if ! APPLICATION="$(pack app-path idris2-lsp)" || [ ! -r "$APPLICATION" ]; then {
+  echo '[ fatal ] Package `idris2-lsp` is not built or not installed in the current'
+  echo '          environment. Maybe, it was installed with an older compiler version'
+  echo '          or using a local `pack.toml` which is not available in the current'
+  echo '          directory. Try to reinstall it with `pack install-app idris2-lsp`.'
+
+  } >&2; exit 2
+fi
+export IDRIS2_PACKAGE_PATH="$(pack package-path)"
+export IDRIS2_LIBS="$(pack libs-path)"
+export IDRIS2_DATA="$(pack data-path)"
+
+
+$APPLICATION "$@"

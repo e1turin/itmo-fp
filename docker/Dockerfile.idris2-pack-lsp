@@ -1,15 +1,14 @@
 FROM ghcr.io/stefan-hoeck/idris2-pack:latest
 
-# setup command line completion
-# FIXME: somehow it doesn't work
-RUN eval "$(idris2 --bash-completion-script idris2)" \
-    && eval "$(pack completion-script pack)"
-
 # setup REPL completion
 RUN apt update && apt install -y rlwrap \
         && echo 'alias idris2="rlwrap idris2"' >> ~/.bash_aliases \
         && echo 'alias pack="rlwrap pack --rlwrap"' >> ~/.bash_aliases
 
 RUN pack install-app idris2-lsp
-#HEALTHCHECK LSP TODO
 
+# Issue with LSP package search dir https://github.com/stefan-hoeck/idris2-pack/issues/292
+# COPY ./idris2-lsp_fix-pack /usr/bin/
+# RUN echo 'alias idris2-lsp=idris2-lsp_fix-pack'
+
+# TODO: healthcheck LSP

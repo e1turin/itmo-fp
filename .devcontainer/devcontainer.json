@@ -5,7 +5,7 @@
     "image": "e1turing/idris2-pack-lsp", // use prebuild image or specify Dockerfile:
 
     // "build": {
-    // 		"dockerfile": "../docker/Dockerfile.idris2-pack-lsp"
+    //     "dockerfile": "../docker/Dockerfile.idris2-pack-lsp"
     // },
 
     // Features to add to the dev container. More info: https://containers.dev/features.

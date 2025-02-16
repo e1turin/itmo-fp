@@ -1,6 +1,14 @@
 # Лабораторные работы по курсу «Функциональное программирование»
 
-# Дополнительные материалы
+## Материалы по учебному курсу
+
+- лекционные материалы: 
+   - http://fp.edu.swampbuds.me/ 
+      - [web.archive.org](https://web.archive.org/web/20240904134050/http://fp.edu.swampbuds.me/)
+- билеты на экзамен:
+   - https://aalexuser.github.io/Functional-programming-exam
+
+## Дополнительные материалы про Idris
 
 1. Записи лекций мини-курса «Функциональное программирование на языке Idris»
    (Виталий Брагилевский) – https://www.youtube.com/playlist?list=PLEqoHzpnmTfD8ocGHDAMUfxTtchqSvrWn

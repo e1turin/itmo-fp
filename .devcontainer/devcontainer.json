@@ -2,7 +2,7 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
     "name": "Idris2 Dev Env",
-    "image": "e1turing/idris2-pack-lsp", // use prebuild image or specify Dockerfile:
+    "image": "e1turing/idris2-pack-lsp:latest", // use prebuild image or specify Dockerfile:
 
     // "build": {
     //     "dockerfile": "../docker/Dockerfile.idris2-pack-lsp"

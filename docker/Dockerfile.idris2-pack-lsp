@@ -1,11 +1,11 @@
 FROM ghcr.io/stefan-hoeck/idris2-pack:latest
 
+RUN pack install-app idris2-lsp
+
 # setup REPL completion
 RUN apt update && apt install -y rlwrap \
-        && echo 'alias idris2="rlwrap idris2"' >> ~/.bash_aliases \
-        && echo 'alias pack="rlwrap pack --rlwrap"' >> ~/.bash_aliases
-
-RUN pack install-app idris2-lsp
+        && echo 'alias idris2="rlwrap --no-warnings idris2"' >> ~/.bash_aliases \
+        && echo 'alias pack="rlwrap --no-warnings pack --rlwrap"' >> ~/.bash_aliases
 
 # Issue with LSP package search dir https://github.com/stefan-hoeck/idris2-pack/issues/292
 # COPY ./idris2-lsp_fix-pack /usr/bin/

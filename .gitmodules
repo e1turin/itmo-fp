@@ -4,3 +4,6 @@
 [submodule "lab-2-data-structures"]
 	path = lab-2-data-structures
 	url = https://github.com/e1turin/itmo-fp-data-structures.git
+[submodule "lab-4-pbt-lib"]
+	path = lab-4-pbt-lib
+	url = https://github.com/e1turin/itmo-fp-lab-4-pbt-lib.git

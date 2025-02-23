@@ -2,8 +2,8 @@
 
 ## Материалы по учебному курсу
 
-- лекционные материалы: 
-   - http://fp.edu.swampbuds.me/ 
+- лекционные материалы:
+   - http://fp.edu.swampbuds.me/
       - [web.archive.org](https://web.archive.org/web/20240904134050/http://fp.edu.swampbuds.me/)
 - билеты на экзамен:
    - https://aalexuser.github.io/Functional-programming-exam
@@ -25,7 +25,12 @@
 4. Инструкция по работе с пакетныйм менеджером `pack` – https://github.com/stefan-hoeck/idris2-pack
 5. Документация к языку на официальном сайте (полезно смотреть документацию к API)
    – https://www.idris-lang.org/pages/documentation.html
-
+6. Документация к стандартной библиотеке (https://www.idris-lang.org/docs/idris2/current):
+   - Prelude: https://www.idris-lang.org/docs/idris2/current/prelude_docs/index.html
+   - Basic packets: https://www.idris-lang.org/docs/idris2/current/base_docs/index.html
+   - Contrib (?): https://www.idris-lang.org/docs/idris2/current/contrib_docs/index.html
+   - Network: https://www.idris-lang.org/docs/idris2/current/network_docs/
+   - Golden Tests: https://www.idris-lang.org/docs/idris2/current/test_docs/docs/Test.Golden.html
 
 # Комментарии
 
@@ -118,6 +123,7 @@ idris2 --install my-package-1/my-package-1.ipkg
 
 Так же можно использовать готовый `.editorconfig` (с расширением VS Code
 `EditorConfig.EditorConfig`) из репозитория Idris2:
+
 ```sh
 wget https://raw.githubusercontent.com/idris-lang/Idris2/refs/heads/main/.editorconfig
 # or
@@ -125,3 +131,4 @@ curl -L -O https://raw.githubusercontent.com/idris-lang/Idris2/refs/heads/main/.
 # or
 echo -e 'GET /idris-lang/Idris2/refs/heads/main/.editorconfig HTTP/1.0\nHost: raw.githubusercontent.com\n\n' | openssl s_client -quiet -connect raw.githubusercontent.com:443 2>/dev/null | sed '0,/^\s*$/d' > .editorconfig
 ```
+

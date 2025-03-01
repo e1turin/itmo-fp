@@ -119,6 +119,7 @@ idris2 --install my-package-1/my-package-1.ipkg
 
 Для Idris2 есть неофициальный Style Guide:
 - https://github.com/stefan-hoeck/idris2-style-guide (от создателя `pack`)
+  - -- тут есть много полезной информации для понимания языка.
 - или другой https://github.com/expede/idris-styleguide.
 
 Так же можно использовать готовый `.editorconfig` (с расширением VS Code
